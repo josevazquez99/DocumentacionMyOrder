@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Frontend (Flutter)">
+  <h1 class="text-3xl font-bold mb-4">📱 Frontend - Flutter</h1>
+
+  <p class="mb-6">
+    Esta sección documenta la aplicación frontend desarrollada con <strong>Flutter</strong>, diseñada para operar en plataformas móviles (Android/iOS) y web.
+  </p>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">📦 Estructura del proyecto</h2>
+  <pre class="bg-gray-900 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+lib/
+├── main.dart                # Punto de entrada principal
+├── screens/                # Pantallas o vistas
+│   ├── home_screen.dart
+│   └── menu_screen.dart
+├── widgets/                # Componentes reutilizables
+├── models/                 # Modelos de datos
+├── services/               # Lógica para API, auth, etc.
+  </code></pre>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🚀 Cómo ejecutar</h2>
+  <ul class="list-disc list-inside space-y-2">
+    <li>Instala Flutter: <code>https://docs.flutter.dev/get-started/install</code></li>
+    <li>Desde la raíz del proyecto:</li>
+  </ul>
+  <pre class="bg-gray-800 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+flutter pub get
+flutter run
+  </code></pre>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🎯 Características principales</h2>
+  <ul class="list-disc list-inside space-y-2">
+    <li>Autenticación con Firebase</li>
+    <li>Navegación con rutas nombradas</li>
+    <li>Consumo de API RESTful</li>
+    <li>Responsive para dispositivos móviles y web</li>
+  </ul>
+</Layout>

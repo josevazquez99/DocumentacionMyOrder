@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Backend (Node.js)">
+  <h1 class="text-3xl font-bold mb-4">⚙️ Backend - Node.js</h1>
+
+  <p class="mb-6">
+    Esta sección documenta la API backend desarrollada con <strong>Node.js</strong> y <strong>Express.js</strong>. Gestiona usuarios, pedidos, productos y más.
+  </p>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">📁 Estructura del proyecto</h2>
+  <pre class="bg-gray-900 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+src/
+├── controllers/          # Lógica de negocio (CRUD)
+├── routes/               # Rutas de la API
+├── models/               # Modelos de datos (MongoDB)
+├── middlewares/          # Autenticación, validaciones
+├── config/               # Conexión a base de datos
+server.js                 # Entrada principal del servidor
+  </code></pre>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🚀 Cómo ejecutar</h2>
+  <pre class="bg-gray-800 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+npm install
+npm run dev
+  </code></pre>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🔐 Variables de entorno (.env)</h2>
+  <pre class="bg-gray-800 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+PORT=3000
+MONGO_URI=mongodb+srv://...
+JWT_SECRET=clave_super_segura
+  </code></pre>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">📨 Endpoints principales</h2>
+  <ul class="list-disc list-inside space-y-2">
+    <li><code>GET /api/products</code> – Obtener todos los productos</li>
+    <li><code>POST /api/orders</code> – Crear nuevo pedido</li>
+    <li><code>POST /api/login</code> – Login de usuario</li>
+    <li><code>GET /api/users/:id</code> – Obtener info de usuario</li>
+  </ul>
+</Layout>

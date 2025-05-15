@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Documentación Restaurante">
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-extrabold text-primary mb-6 flex items-center gap-2">
+      🍽️ Proyecto Restaurante
+    </h1>
+
+    <p class="text-lg text-gray-700 mb-8">
+      Bienvenido a la documentación técnica del proyecto <strong>Restaurante</strong>, compuesto por:
+    </p>
+
+    <ul class="list-disc list-inside text-gray-800 space-y-3 mb-8">
+      <li>
+        📱 <strong>Frontend</strong>: 
+        <a href="/frontend" class="text-blue-600 hover:underline">Ver documentación del frontend →</a>
+      </li>
+      <li>
+        ⚙️ <strong>Backend</strong>: 
+        <a href="/backend" class="text-blue-600 hover:underline">Ver documentación del backend →</a>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-gray-900 mb-4 mt-10">📂 Estructura General</h2>
+    <div class="bg-gray-900 text-green-400 rounded-xl p-4 text-sm font-mono shadow-md mb-8 overflow-x-auto">
+      <pre><code>
+.
+├── FrontedRestaurante-feature/   # Proyecto Flutter
+└── BackendRestaurante-feature/   # API Node.js
+      </code></pre>
+    </div>
+
+    <p class="text-gray-600">
+      Usa el menú de navegación o los enlaces anteriores para explorar cada módulo técnico del sistema.
+    </p>
+  </section>
 </Layout>
