@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
   <h1 class="text-3xl font-bold mb-4">📱 Frontend - Flutter</h1>
 
   <p class="mb-6">
-    Esta sección documenta la aplicación frontend desarrollada con <strong>Flutter</strong>, diseñada para operar en plataformas móviles (Android/iOS) y web.
+    Esta sección documenta la aplicación frontend desarrollada con <strong>Flutter</strong>, diseñada para operar en plataformas móviles (Android/iOS) y web. La app está conectada con la API del backend y permite a los usuarios interactuar con el restaurante desde cualquier dispositivo.
   </p>
 
   <h2 class="text-2xl font-semibold mt-8 mb-2">📦 Estructura del proyecto</h2>
@@ -15,10 +15,16 @@ lib/
 ├── main.dart                # Punto de entrada principal
 ├── screens/                # Pantallas o vistas
 │   ├── home_screen.dart
-│   └── menu_screen.dart
-├── widgets/                # Componentes reutilizables
-├── models/                 # Modelos de datos
-├── services/               # Lógica para API, auth, etc.
+│   ├── login_screen.dart
+│   ├── register_screen.dart
+│   ├── menu_screen.dart
+│   ├── cart_screen.dart
+│   ├── order_screen.dart
+│   └── review_screen.dart
+├── widgets/                # Componentes reutilizables (e.g., product_card.dart)
+├── models/                 # Modelos de datos (Product, User, Order...)
+├── services/               # Lógica de negocio: API, auth, carrito, etc.
+├── providers/              # Gestión de estado (con Provider)
   </code></pre>
 
   <h2 class="text-2xl font-semibold mt-8 mb-2">🚀 Cómo ejecutar</h2>
@@ -33,9 +39,20 @@ flutter run
 
   <h2 class="text-2xl font-semibold mt-8 mb-2">🎯 Características principales</h2>
   <ul class="list-disc list-inside space-y-2">
-    <li>Autenticación con Firebase</li>
-    <li>Navegación con rutas nombradas</li>
-    <li>Consumo de API RESTful</li>
-    <li>Responsive para dispositivos móviles y web</li>
+    <li>Registro e inicio de sesión con Firebase Auth</li>
+    <li>Visualización de productos y detalles</li>
+    <li>Gestión del carrito de la compra</li>
+    <li>Creación de pedidos y seguimiento</li>
+    <li>Reseñas de productos por parte de los usuarios</li>
+    <li>Diseño responsive para móviles y web</li>
+    <li>Consumo de la API REST del backend (Node.js)</li>
+    <li>Gestión de estado con Provider</li>
+    <li>Interfaz moderna y adaptada a la identidad visual del restaurante</li>
   </ul>
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🌐 Enlace de la aplicación</h2>
+<p class="mb-6">
+  Puedes acceder a la versión desplegada desde el siguiente enlace:
+  <a href="https://flutterrestaurante-eddd3.web.app/" class="text-blue-600 underline" target="_blank">https://flutterrestaurante-eddd3.web.app/</a>
+</p>
+
 </Layout>

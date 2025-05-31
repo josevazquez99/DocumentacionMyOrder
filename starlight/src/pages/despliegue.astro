@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="🚀 Despliegue">
+  <h1 class="text-3xl font-bold mb-4">🚀 Despliegue del Proyecto</h1>
+
+  <p class="mb-6">
+    El despliegue de este proyecto se ha realizado utilizando tres plataformas especializadas, cada una enfocada en una parte distinta de la arquitectura:
+  </p>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🛢️ Base de datos – Railway</h2>
+  <p class="mb-4">
+    La base de datos MongoDB está alojada en <a href="https://railway.app" class="text-blue-600 underline" target="_blank">Railway</a>, una plataforma que facilita el despliegue y gestión de servicios backend. Desde allí se gestiona la persistencia de los datos, incluyendo usuarios, productos, pedidos y reseñas.
+  </p>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li>URL protegida mediante variables de entorno</li>
+    <li>Acceso desde el backend desplegado en Render</li>
+    <li>Monitorización sencilla y backups automáticos</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">⚙️ Backend – Render</h2>
+  <p class="mb-4">
+    El servidor de la API REST construida con Node.js y Express se ha desplegado en <a href="https://render.com" class="text-blue-600 underline" target="_blank">Render</a>. Esta plataforma permite ejecutar servidores Node.js de forma sencilla y con integración continua desde GitHub.
+  </p>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li>Despliegue automático desde rama principal de GitHub</li>
+    <li>Configuración de variables de entorno (.env)</li>
+    <li>Conexión segura a la base de datos en Railway</li>
+    <li>URL pública para ser consumida por el frontend Flutter</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">📱 Frontend – Firebase Hosting</h2>
+  <p class="mb-4">
+    La app desarrollada en Flutter se ha compilado para web y desplegado en <a href="https://firebase.google.com" class="text-blue-600 underline" target="_blank">Firebase Hosting</a>. Esta opción permite un despliegue rápido, gratuito y seguro mediante el comando <code>firebase deploy</code> y flutter build web.
+  </p>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li>Compilación con <code>flutter build web</code></li>
+    <li>Despliegue mediante <code>firebase deploy</code></li>
+    <li>Dominio personalizado disponible</li>
+    <li>Integración con autenticación Firebase</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold mt-8 mb-2">🌐 Arquitectura general</h2>
+  <pre class="bg-gray-800 text-white p-4 rounded-xl overflow-x-auto text-sm"><code>
+[Frontend - Firebase Web]
+          |
+          v
+[Backend - Render (Node.js API)]
+          |
+          v
+[Base de datos - Railway (MongoDB)]
+  </code></pre>
+</Layout>
